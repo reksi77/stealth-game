@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shadow Vault — a stealth heist</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="wrap">
+  <header id="topbar">
+    <div id="title-block">
+      <h1>SHADOW VAULT</h1>
+      <p id="subtitle">Slip past the guards. Reach the exit unseen.</p>
+    </div>
+    <div id="hud">
+      <span id="hud-level" class="hud-item">Level 1</span>
+      <span id="hud-shards" class="hud-item">◆ 0/0</span>
+      <span id="hud-score" class="hud-item">Score 0</span>
+      <span id="hud-attempts" class="hud-item">Attempts ●●●</span>
+      <span id="hud-timer" class="hud-item">0:00</span>
+    </div>
+  </header>
+
+  <div id="stage">
+    <canvas id="game" width="960" height="640"></canvas>
+    <div id="detection-bar">
+      <span id="detection-label">UNSEEN</span>
+      <div id="detection-track"><div id="detection-fill"></div></div>
+    </div>
+    <div id="overlay" class="hidden">
+      <h2 id="overlay-title"></h2>
+      <p id="overlay-text"></p>
+      <button id="overlay-button" type="button"></button>
+    </div>
+  </div>
+
+  <footer id="help">
+    <span><b>WASD / arrows</b> move</span>
+    <span><b>Shift</b> sneak (slow, silent)</span>
+    <span><b>Click</b> walk there</span>
+    <span><b>Space</b> continue</span>
+    <span class="dim">Bushes and dark shadow hide you · running steps are heard · the cone is what the guard sees</span>
+  </footer>
+</main>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
